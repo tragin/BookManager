@@ -68,7 +68,6 @@ public class BookReturnController {
         //query using ID in book table...and check status. If checked out, return it. If checked in, check it out
         Connection con1 = null;
 
-
         try {
             String sqlhost = "jdbc:mysql://localhost:3306/bookmanager?useSSH=false"; //This will be host of mysql server (localhost:3306)
             String login = "root";
@@ -108,7 +107,6 @@ public class BookReturnController {
                             "set issuedDate = ?, status = ?" +
                             " where bookID= ?";
 
-                    //ResultSet rs = null;
                     System.out.println(newStatus);
                     stmt1 = con1.prepareStatement(query1);
                     stmt1.setString(1, "2017-04-30");
@@ -124,7 +122,6 @@ public class BookReturnController {
                             "set issuedDate = ?, status = ?" +
                             " where bookID= ?";
 
-                    //ResultSet rs = null;
                     stmt2 = con1.prepareStatement(query2);
                     stmt2.setString(1, "2017-04-30");
                     stmt2.setString(2, newStatus);
@@ -141,8 +138,4 @@ public class BookReturnController {
             System.out.println("No result in table.");
             ex2.printStackTrace();
         }
-        if (ID.equals("12345"))
-            System.out.println("That's amazing");
-    }
-
 }
