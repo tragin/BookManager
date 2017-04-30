@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.Search_Controller">
+   <children>
+      <Label alignment="TOP_CENTER" layoutX="256.0" layoutY="64.0" prefHeight="400.0" prefWidth="600.0" text="Search" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <font>
+            <Font name="Birmingham" size="24.0" />
+         </font>
+         <padding>
+            <Insets top="60.0" />
+         </padding>
+      </Label>
+      <HBox layoutX="66.0" layoutY="102.0" prefHeight="25.0" prefWidth="489.0">
+         <children>
+            <ComboBox fx:id="searchbox" layoutX="66.0" layoutY="130.0" prefWidth="150.0" promptText="Search Type">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Book" />
+                    <String fx:value="Student" />
+                    <String fx:value="Teacher" />
+                    <String fx:value="Class" />
+                     </FXCollections>
+
+                </items>
+            </ComboBox>
+            <TextField fx:id="searchField" layoutX="226.0" layoutY="130.0" prefHeight="25.0" prefWidth="329.0" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <Button fx:id="searchButton" layoutX="503.0" layoutY="134.0" mnemonicParsing="false" onAction="#searchFired" text="Search" />
+      <HBox alignment="CENTER_RIGHT" layoutY="-10.0" prefHeight="47.0" prefWidth="600.0" AnchorPane.bottomAnchor="353.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button fx:id="homeBtn" mnemonicParsing="false" onAction="#homeFired" text="Home">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="logoutBtn" alignment="CENTER" contentDisplay="TOP" mnemonicParsing="false" onAction="#logoutFired" text="Logout">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin></Button>
+         </children>
+      </HBox>
+      <Text fx:id="searchMsg" layoutX="219.0" layoutY="151.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="216.13671875" />
+      <TableView layoutX="66.0" layoutY="171.0" prefHeight="200.0" prefWidth="489.0" >
+        <columns>
+          <TableColumn fx:id="sType" prefWidth="75.0" text="Type" />
+          <TableColumn fx:id="results" prefWidth="333.0" text="Results" />
+            <TableColumn fx:id="status" text="Status" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="test.BookReturnController">
+   <children>
+      <HBox layoutX="221.0" layoutY="46.0">
+         <children>
+            <Text layoutX="221.0" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Return">
+               <font>
+                  <Font name="Birmingham" size="24.0" />
+               </font>
+            </Text>
+         </children>
+      </HBox>
+      <TextField fx:id="bookID" layoutX="184.0" layoutY="188.0" prefHeight="25.0" prefWidth="232.0" />
+      <HBox layoutX="278.0" layoutY="149.0" />
+      <Text layoutX="235.0" layoutY="157.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter Book ID">
+         <font>
+            <Font name="Birmingham" size="18.0" />
+         </font>
+      </Text>
+      <HBox alignment="CENTER_RIGHT" prefHeight="39.0" prefWidth="607.0">
+         <children>
+            <Button fx:id="homeBtn" mnemonicParsing="false" onAction="#homeFired" text="Home">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutFired" text="Logout">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets left="10.0" right="10.0" top="5.0" />
+         </padding>
+      </HBox>
+      <Button fx:id="rtnButton" layoutX="430.0" layoutY="188.0" mnemonicParsing="false" onAction="#returnFired" text="Return" />
+   </children>
+</AnchorPane>
